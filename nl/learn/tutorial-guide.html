@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html class="no-js" lang="nl">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="p5.js a JS client-side library for creating graphic and interactive experiences, based on the core principles of Processing.">
+    <title tabindex="1">learn | p5.js</title>
+    <link rel="stylesheet" href="/assets/css/all.css?v=b0528d">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap" rel="stylesheet">
+
+    <link rel="shortcut icon" href="/../../assets/img/favicon.ico">
+    <link rel="icon" href="/../../assets/img/favicon.ico">
+
+
+    <script src="/../../assets/js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="/../../assets/js/vendor/ace-nc/ace.js"></script>
+    <script src="/../../assets/js/vendor/ace-nc/mode-javascript.js"></script>
+    <script src="/../../assets/js/vendor/prism.js"></script>
+    <script src="/assets/js/init.js?v=97b4f7"></script>
+
+
+  </head>
+  <body>
+
+    <a href="#content" class="sr-only">Spring naar inhoud</a>
+    
+    <!-- p5*js language buttons -->
+    <div id="i18n-btn">
+      <h2 id="i18n-settings" class="sr-only">Taalinstellingen</h2>
+      <ul id="i18n-buttons" aria-labelledby="i18n-settings">
+        <li><a href='#' lang='en' data-lang='en'>English</a></li>
+        <li><a href='#' lang='es' data-lang='es'>Español</a></li>
+        <li><a href='#' lang='nl' data-lang='nl'>Nederlands</a></li>
+        <li><a href='#' lang='zh-Hans' data-lang='zh-Hans'>简体中文</a></li>
+        <li><a href='#' lang='ko' data-lang='ko'>한국어</a></li>
+      </ul>
+    </div>
+    <!-- .container -->
+    <div class="container">
+
+      <!-- logo -->
+      <header id="lockup">
+        <a href="/nl/">
+          <img src="/../../assets/img/p5js.svg" alt="p5 homepage" id="logo_image" class="logo" />
+          <div id="p5_logo"></div>
+        </a>
+      </header>
+      <!-- close logo -->
+
+      
+
+<div id="learn-page">
+
+  
+  <!-- site navigation -->
+  <div class="column-span">
+    <nav class="sidebar-menu-nav-element">
+      <h2 id="menu-title" class="sr-only">Website Navigatie</h2>
+      <input class="sidebar-menu-btn" type="checkbox" id="sidebar-menu-btn" />
+      <label class="sidebar-menu-icon" for="sidebar-menu-btn"><span class="sidebar-nav-icon"></span></label>
+      <ul id="menu" class="sidebar-menu" aria-labelledby="menu-title">
+        <li><a href="/nl/">Start</a></li>
+        <li><a href="https://editor.p5js.org">Editor</a></li>
+        <li><a href="/nl/download/">Download</a></li>
+        <li><a href="/nl/download/support.html">Doneren</a></li>
+        <li><a href="/nl/get-started/">Aan de slag</a></li>
+        <li><a href="/nl/reference/">Referentie</a></li>
+        <li><a href="/nl/libraries/">Programma bibliotheken</a></li>
+        <li><a href="/nl/learn/">Leer</a></li>
+        <li><a href="/nl/examples/">Voorbeelden</a></li>
+        <li><a href="/nl/books/">Boeken</a></li>
+        <li><a href="/nl/community/">Gemeenschap</a></li>
+        <li><a href="https://showcase.p5js.org">Showcase</a></li>
+        <li><a href="https://discourse.processing.org/c/p5js" target=_blank class="other-link">Forum</a></li>
+        <li><a href="http://github.com/processing/p5.js" target=_blank class="other-link">GitHub</a></li>
+        <li><a href="http://twitter.com/p5xjs" target=_blank class="other-link">Twitter</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <div class="column-span">
+
+    <main >
+
+      <h1>Een gids om bij te dragen met nieuwe p5.js leermiddelen.</h1>
+      <div class="attribution">
+        geschreven door Tega Brain.
+      </div>
+      <p>
+        Wij nodigen educatoren en vrijwilligers uit om leermiddelen te maken. Het p5js project  is erop gericht om inclusief te zijn en het programmeren toegankelijker te maken, en we zijn enthousiast als we allerlei aspecten van het ontwikkelen kunnen publiceren. Momenteel hebben we leermiddelen voor p5, voor algemene programmeer technieken en over hoe je kan bijdragen aan een open source project.
+      </p>
+      <p>
+        We verwelkomen bijdragen van leermiddelen, en dit stappenplan kan je daarbij helpen.
+      </p>
+
+      <h2>Aan de slag:</h2>
+      <ul class="list_view">
+        <li>
+          Kijk na dat het onderwerp waarover je wil gaan schrijven al niet reeds behandeld is. Er is een <a href="https://docs.google.com/spreadsheets/d/1sh3IwcCUY4Bm8N4fRZw6CwSDdQmmXgY_awjVj-UC8mo/edit#gid=0">spreadsheet</a>
+          die een overzicht biedt in de voortgang van de ontwikkelde leermiddelen. Als je onderwerp erbij staat, kan je misschien daaraan meewerken. Laat ons iets weten dan.
+        </li>
+        <li>
+          Als je onderwerp er niet bij staat, beschrijf dan je voorstel in een paar zinnen en email het naar education@p5js.org.
+        </li>
+      </ul>
+      <h2>Hoe je een p5js tutorial voorbereidt om te publiceren:</h2>
+      <p>
+        Als je tutorial klaar is om te publiceren, volg dan aub deze stappen om je inhoud klaar te maken voor de p5js website.
+      </p>
+      <p>
+        Maak de inhoud van je tutorial in een tutorial-naan.hbs bestand met <a href="https://github.com/mayaman/p5js-website/blob/master/src/templates/pages/learn/test-tutorial.hbs">deze basis structuur</a>
+        . Zoals je kan zien in dit bestand, moet het een hoofding bevatten zoals hieronder:
+      </p>
+      <img src="../../assets/learn/tutorial-guide/images/screenshot-1.png" alt="Screenshot">
+
+      <p>
+        De map waarin je tutorial is opgeslagen zal in de 'tutorials' map van de p5js website geplaatst worden. Het bestand genaamd index.hbs is de<a href="/nl/learn/">p5.js tutorials startpagina,</a>
+         en het test-tutorial.hbs bestand is de test tutorial.
+      </p>
+      <p>
+        Alle inhoud moet in de:
+       
+        &lt;section &gt; &lt;/section&gt;
+        tags op de pagina gaan, met gebruik van de &lt;h1&gt; en &lt;h2&gt; hoofding tags en de &lt;p&gt; paragraaaf tags zoals je kan zien op de<a href="https://github.com/processing/p5.js-website/blob/main/src/templates/pages/learn/test-tutorial.hbs">test tutorial pagina.</a></p>
+      <p>
+        Als je tutorial afbeeldingen bevat, moet je die in de 'assets' map plaatsen van de p5js website, in src/assets/learn/test-tutorial/images zoals je hieronder kan zien.
+      </p>
+      <img src="../../assets/learn/tutorial-guide/images/screenshot-2.png" alt="Screenshot">
+      <p>
+        Om code correct weer te geven in de html, gebruik de tag:
+      </p>
+       
+        <pre><code class="language-javascript">
+&lt;pre&gt;&lt;code class="language-javascript"&gt;
+Your code here!
+&lt;/code>&lt;/pre&gt;
+
+</code></pre>
+
+      <h2>Embedden van p5.js schetsen</h2>
+      <p>
+        Je kan ter illustratie in je tutorial geanimeerde, interactieve, en bewerkbare voorbeelden insluiten. Je demonstraties moeten als p5.js schetsen worden voorbereid en kunnen op twee manieren in je tutorial worden verwerkt.
+      </p>
+
+      <ol>
+        <li>
+          Als het voorbeeld bewerkbaar moet zijn zoals in <a href="http://p5js.org/reference/#/p5/ellipse">de documentatie paginas</a> van de p5js site, dan moet de p5 schets met behulp van de p5js widget worden ingesloten. Volg <a href="https://toolness.github.io/p5.js-widget/">deze gids </a>over hoe je p5js schetsen moet insluiten met de widget geschreven door <a href="https://github.com/toolness">Toolness</a>. Je kan zo'n resultaat ook zien op de<a href="https://github.com/processing/p5.js-website/blob/main/src/templates/pages/learn/test-tutorial.hbs"> test tutorial pagina</a>.</li>
+        <li>
+          Als je voorbeeld geanimeerd en/of interactief moet zijn, maar niet bewerkbaar, dan moet je de schets in een iframe embedden, zoals hieronder beschreven.
+        </li>
+      </ol>
+
+      <h2>Insluiten van een p5 schets met en iframe</h2>
+
+      <p>
+        Een iframe is als het maken van een venster in een webpagina waarin je een andere pagina kan verkennen. In dit geval zal het een venster zijn die de index.html pagina van je p5.js schets bevat.
+      </p>
+      <img src="https://github.com/tegacodes/p5.js-education/raw/master/images/iframe-2.jpg" alt="tutorialFileStructure" width="600">
+
+      <p>
+        Zet je p5 schetsen in de map /src/assets/learn van de p5js website, in een map met de naam van je schets zoals je kan zien in de schreenshot. Dit is waar je alle afbeeldingen en schetsen waarnaar je verwijst in iframes moeten worden opgeslagen.
+      </p>
+
+      <img src="../../assets/learn/tutorial-guide/images/screenshot-3.png" alt="Screenshot">
+
+<p>In de onderliggende mappen van je voorbeelden moet er een sketch.js en een embed.html bestand zijn voor je schets.</p>
+<img src="../../assets/learn/tutorial-guide/images/screenshot-4.png" alt="Screenshot">
+
+<p>Zorg dat je embed.html bestand juiste links bevat naar de p5 programma bibliotheken van de site. Als je bestandstructuur dezelfde is als hierboven, dan moet de link "../../../js/p5.min.js" zijn.</p>
+<p>Je kan dan de index bestanden als iframes insluiten in het .hbs bestand waarin de inhoud staat. De embed code voor het iframe zal dan zo zijn:</p>
+  <pre><code class="language-javascript">
+&lt;iframe src="http://p5js.org/assets/learn/tes-tutorial/embed.html" width="600" height="400"&gt;
+&lt;/iframe&gt;
+</code></pre>
+
+<p>Het stijlen van het iframe (dit kan direct in de post of in een styleheet):</p>
+  <pre><code class="language-javascript">
+&lt;style&gt; iframe{ border: none; } &lt;/style&gt;
+</code></pre>
+
+<p>Hier vind je bijvoorbeeld een schets: </p>
+<a href="http://staging.p5js.org/assets/learn/test-tutorial/embed.html">http://staging.p5js.org/assets/learn/test-tutorial/embed.html</a>
+
+<p>En hier is het ingesloten in de p5 site met de volgende code:  </p>
+<a href="http://staging.p5js.org/learn/test-tutorial.html">http://staging.p5js.org/learn/test-tutorial.html</a>
+
+<p>Eén ding dat we nog opmerken, is dat je de grootte van het iframe manueel moet bepalen, dus het werkt het beste als dingen een standaard grootte hebben.</p>
+
+<p>Merk ook op dat de links naar de p5.js programma bibliotheken niet uitgaan van de .eps pagina met alle inhoud, maar in de html pagina die je schets weergeeft (in dit geval embed.html).</p>
+
+<p>Meer informatie over het embedden van p5.js schetsen vind je <a href="https://github.com/processing/p5.js/wiki/Embedding-p5.js">hier.</a></p>
+<h2>Tot slot</h2>
+<p>Van zodra je klaar bent met het schrijven van je tutorial en je inhoud werd goedgekeurd, mag je je bestanden volgens de bovenstaande structuur aan je eigen kopie van de p5.js website git repository toevoegen. Je maakt dus een "Fork" van de repo, en daarin maak je een nieuwe branch waarop je je bestanden toevoegt. Dit sla je op met een commit die je online publiceert. Vervolgens kan je een pull request maken in de originele p5.js website git repo, zodat we je branch kunnen opnemen en je bijdrage kunnen publiceren!</p>
+
+    <p>Bedankt!</p>
+
+  </main>
+
+  
+  <footer>
+    <h2 class="sr-only">Dankbetuiging</h2>
+    <p> p5.js wordt geleid door <a href='https://github.com/mcturner1995' target="_blank">Moira
+        Turner</a> en werd gemaakt door <a href='http://lauren-mccarthy.com' target="_blank">Lauren Lee
+        McCarthy</a>. p5.js is ontwikkeld door een gemeenschap, met ondersteuning door de <a href="http://processing.org/foundation/" target="_blank">Processing
+        Foundation</a>  en 
+      <a href="http://itp.nyu.edu/itp/" target="_blank">NYU ITP</a>. Persoonlijkheid en grafisch ontwerp door <a
+        href="http://jereljohnson.com/" target="_blank">Jerel Johnson</a>. <a href="/nl/copyright.html">&copy;
+        Info.</a></p>
+  </footer>
+</div> <!-- end column-span -->
+
+
+<!-- outside of column for footer to go across both -->
+
+<p class="clearfix"> &nbsp; </p>
+
+<object type="image/svg+xml" data="../../assets/img/thick-asterisk-alone.svg" id="asterisk-design-element" aria-hidden="true">
+</object>
+
+</div><!-- end id="get-started-page"  -->
+
+
+    </div> <!-- close class='container'-->
+
+    
+    <nav id="family" aria-labelledby="processing-sites-heading">
+      <h2 id="processing-sites-heading" class="sr-only">Processing Sister Sites</h2>
+      <ul id="processing-sites" aria-labelledby="processing-sites-heading">
+        <li><a href="http://processing.org">Processing</a></li>
+        <li><a class="here" href="/nl/">p5.js</a></li>
+        <li><a href="http://py.processing.org/">Processing.py</a></li>
+        <li><a href="http://android.processing.org/">Processing for Android</a></li>
+        <li><a href="http://pi.processing.org/">Processing for Pi</a></li>
+        <li><a href="https://processingfoundation.org/">Processing Foundation</a></li>
+      </ul>
+      <a tabindex="1" href="#content" id="skip-to-content">Skip to main content</a>
+    
+    </nav>
+    <script>
+    var langs = ["en","es","ko","nl","zh-Hans"];
+
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-53383000-1', 'auto');
+    ga('send', 'pageview');
+
+    $(window).ready(function() {
+      if (window.location.pathname !== '/' && window.location.pathname !== '/index.html') {
+        $('#top').remove();
+      } else {
+        $('#top').show();
+      }
+    });
+    </script>
+
+
+  </body>
+</html>

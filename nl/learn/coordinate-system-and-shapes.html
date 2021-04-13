@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html class="no-js" lang="nl">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="p5.js a JS client-side library for creating graphic and interactive experiences, based on the core principles of Processing.">
+    <title tabindex="1">learn | p5.js</title>
+    <link rel="stylesheet" href="/assets/css/all.css?v=b0528d">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap" rel="stylesheet">
+
+    <link rel="shortcut icon" href="/../../assets/img/favicon.ico">
+    <link rel="icon" href="/../../assets/img/favicon.ico">
+
+
+    <script src="/../../assets/js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="/../../assets/js/vendor/ace-nc/ace.js"></script>
+    <script src="/../../assets/js/vendor/ace-nc/mode-javascript.js"></script>
+    <script src="/../../assets/js/vendor/prism.js"></script>
+    <script src="/assets/js/init.js?v=97b4f7"></script>
+
+
+  </head>
+  <body>
+
+    <a href="#content" class="sr-only">Spring naar inhoud</a>
+    
+    <!-- p5*js language buttons -->
+    <div id="i18n-btn">
+      <h2 id="i18n-settings" class="sr-only">Taalinstellingen</h2>
+      <ul id="i18n-buttons" aria-labelledby="i18n-settings">
+        <li><a href='#' lang='en' data-lang='en'>English</a></li>
+        <li><a href='#' lang='es' data-lang='es'>Español</a></li>
+        <li><a href='#' lang='nl' data-lang='nl'>Nederlands</a></li>
+        <li><a href='#' lang='zh-Hans' data-lang='zh-Hans'>简体中文</a></li>
+        <li><a href='#' lang='ko' data-lang='ko'>한국어</a></li>
+      </ul>
+    </div>
+    <!-- .container -->
+    <div class="container">
+
+      <!-- logo -->
+      <header id="lockup">
+        <a href="/nl/">
+          <img src="/../../assets/img/p5js.svg" alt="p5 homepage" id="logo_image" class="logo" />
+          <div id="p5_logo"></div>
+        </a>
+      </header>
+      <!-- close logo -->
+
+      
+
+<div id="learn-page">
+
+  
+  <!-- site navigation -->
+  <div class="column-span">
+    <nav class="sidebar-menu-nav-element">
+      <h2 id="menu-title" class="sr-only">Website Navigatie</h2>
+      <input class="sidebar-menu-btn" type="checkbox" id="sidebar-menu-btn" />
+      <label class="sidebar-menu-icon" for="sidebar-menu-btn"><span class="sidebar-nav-icon"></span></label>
+      <ul id="menu" class="sidebar-menu" aria-labelledby="menu-title">
+        <li><a href="/nl/">Start</a></li>
+        <li><a href="https://editor.p5js.org">Editor</a></li>
+        <li><a href="/nl/download/">Download</a></li>
+        <li><a href="/nl/download/support.html">Doneren</a></li>
+        <li><a href="/nl/get-started/">Aan de slag</a></li>
+        <li><a href="/nl/reference/">Referentie</a></li>
+        <li><a href="/nl/libraries/">Programma bibliotheken</a></li>
+        <li><a href="/nl/learn/">Leer</a></li>
+        <li><a href="/nl/examples/">Voorbeelden</a></li>
+        <li><a href="/nl/books/">Boeken</a></li>
+        <li><a href="/nl/community/">Gemeenschap</a></li>
+        <li><a href="https://showcase.p5js.org">Showcase</a></li>
+        <li><a href="https://discourse.processing.org/c/p5js" target=_blank class="other-link">Forum</a></li>
+        <li><a href="http://github.com/processing/p5.js" target=_blank class="other-link">GitHub</a></li>
+        <li><a href="http://twitter.com/p5xjs" target=_blank class="other-link">Twitter</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <div class="column-span">
+
+    <main >
+      <div class="attribution">
+      Deze tutorial komt uit het boek <em>Learning Processing</em> door Daniel Shiffman, gepubliceerd door Morgan Kaufmann, © 2008 Elsevier Inc. All rights reserved. Omgezet naar p5.js door Alex Yixuan Xu. Vind je fouten? <a href="https://github.com/processing/processing-docs/issues?state=open">laat het ons weten</a>.</div>
+
+      <h1>Coördinaten en vormen</h1>
+      <p>Voor we met p5 beginnen programmeren moeten we wat meetkunde opfrissen. Neem een blad ruitjes papier en teken een lijn. De kortste afstand tussen twee punten is een doodgewone lijn. Laten we daarmee beginnen, met twee punten.</p>
+      <img src="../../assets/learn/coordinate-system-and-shapes/images/drawing-01.png" alt="">
+
+      <p>De bovenstaande figuur toont ons een lijnstuk tussen punt A (1,0) en punt B (4,5). Als je aan een vriend zou willen uitleggen hoe die deze lijn moet tekenen, zou je zeggen "teken een lijn van het punt één-nul tot het punt vier-vijf aub.". Stel je nu even voor dat die vriend een computer is en dat je die dezelfde lijn zou willen laten tekenen. Nu zal je commando er zo uit zien:</p>
+
+      <pre><code class="language-javascript">
+        line(1,0,4,5);
+      </code></pre>
+
+      <p>Zelfs wanneer je de precieze grammaticale regels voor je code niet kent, is het bovenstaande wellicht vrij logisch. We voorzien hier een commando (we zullen hiernaar verwijzen als "function") aan de machine met de naam "line". Bovendien specificeren we hier parameters die beschrijven hoe die lijn getekend moet worden, van punt A (1,0) naar punt B (4,5). Als je een regel code als een zin beschouwt, is de functie het werkwoord en zijn de parameters lijdende voorwerpen. De zin eindigt ook met een puntcomma in plaats van een punt.</p>
+      <img src="../../assets/learn/coordinate-system-and-shapes/images/drawing-02.png" alt="">
+
+      <p>Het besef dat een computerscherm niets meer of minder is dan een sjieke vorm van ruitjespapier is doorslaggevend. Elke pixel van het scherm is gewoon een coördinaat - twee nummers, een "x" (horizontaal) en een "y" (verticaal) - die de plaats van een punt bepaalt. En het is onze taak om te bepalen welke kleuren en vormen er moeten verschijnen op de pixels bij deze coördinaat.</p>
+
+      <p>Maar er is een verschil. Op het ruitjespapier dat je op school gebruikt voor een grafiek (een Cartesiaans assen stelsel) plaats je (0,0) in het centrum, is de y-as naar boven gericht en is de x-as naar rechts gericht (oplopende getallen). Het assen stelsel voor pixels in een venster op je computer is omgekeerd in de richting van de y-as. De oorsprong (0,0) is in de linker bovenhoek, en getallen lopen horizontaal op naar rechts en verticaal naar beneden.</p>
+      <img src="../../assets/learn/coordinate-system-and-shapes/images/drawing-03.svg" alt="">
+
+      <h2>Eenvoudige vormen</h2>
+      <p>Het merendeel van de voorbeelden van p5 programmas zijn visueel. Deze voorbeelden komen eigenlijk neer op het tekenen van vormen door het kleuren van pixels. Laten we vier eenvoudige vormen beschouwen.</p>
+      <img src="../../assets/learn/coordinate-system-and-shapes/images/drawing-04.png" alt="">
+
+      <p>Voor elke vorm willen we eigenlijk te weten komen welke informatie vereist is om te plaats en de grootte (en later ook kleur) van die vorm te bepalen en hoe p5 die informatie verwacht. In elk van de onderstaande diagrammen gaan we uit van een venster met een breedte van 100 pixels en een hoogte van 100 pixels.</p>
+
+      <p>Een <a href="/reference/#/p5/point">point()</a> is de eenvoudigste vorm en een goed vertrekpunt. Om een punt te tekenen hebben we enkel een x en een y coördinaat nodig.</p>
+      <!-- this script only needs to get added once even if there are multiple widget instances -->
+      <script src="//toolness.github.io/p5.js-widget/p5-widget.js"></script>
+<script type="text/p5" data-autoplay data-p5-version="1.3.1">
+function setup(){
+  createCanvas(100, 100);
+}
+function draw(){
+  point(40, 50); // point(x, y)
+}
+</script>
+
+      <p>Een <a href="/reference/#/p5/line">line()</a> is ook niet zo moeilijk en vereist twee punten: (x1,y1) en (x2,y2):</p>
+<script type="text/p5" data-autoplay data-p5-version="1.3.1">
+function setup(){
+  createCanvas(100, 100);
+}
+function draw(){
+  line(10, 20, 50, 20); // line(x1, y1, x2, y2)
+}
+</script>
+
+      <p>Eens we een <a href="/reference/#/p5/rect">rect()</a>gaan tekenen worden dingen wat ingewikkelder. In p5 kan je een rechthoek bepalen met een coördinaat voor de linker bovenhoek en met de breedte- en hoogtemaat.</p>
+<script type="text/p5" data-autoplay data-p5-version="1.3.1">
+function setup(){
+  createCanvas(100, 100);
+}
+function draw(){
+  rect(10, 20, 40, 30); // rect(x, y, width, height)
+}
+</script>
+
+      <p>Een tweede manier om een rechthoek te tekenen kan door het centrum te bepalen en de breedte- en hoogtemaat. Als we deze manier verkiezen moeten we voor de instructie van de rechthoek eerst de<a href="/reference/#/p5/CENTER">CENTER</a> modus willen gebruiken. Merk op dat p5 case-sensitive is (hoofdletter gevoelig).</p>
+<script type="text/p5" data-autoplay data-p5-version="1.3.1">
+function setup(){
+  createCanvas(100, 100);
+  rectMode(CENTER);
+}
+function draw(){
+  rect(30, 20, 40, 20); // rect(x, y, width, height)
+}
+</script>
+
+      <p>Tot slot kunnen we ook een rechthoek tekenen met twee punten (de linker bovenhoek en de rechter onderhoek). De modus is hier<a href="/reference/#/p5/CORNERS">CORNERS</a>. Merk op dat dit voorbeeld hetzelfde resultaat geeft op het scherm dan het voorbeeld erboven.</p>
+<script type="text/p5" data-autoplay data-p5-version="1.3.1">
+function setup(){
+  createCanvas(100, 100);
+  rectMode(CORNERS);
+}
+function draw(){
+  rect(10, 10, 50, 30); // rect(x1, y1, x2, y2)
+}
+</script>
+
+      <p>Ok. Eens we het concept van het tekenen van een rechthoek onder de knie hebben, dan is <a href="/reference/#/p5/ellipse">ellipse()</a> gemakkelijk. In feite is dat identiek aan <a href="/reference/#/p5/rect">rect()</a> met dat verschil dat een ovaal wordt getekend waar de rechthoek zou zijn. De standaard modus voor een <a href="/reference/#/p5/ellipse">ellipse()</a> is <a href="/reference/#/p5/CENTER">CENTER</a>, in tegenstelling tot <a href="/reference/#/p5/CORNER">CORNER</a>.</p>
+<script type="text/p5" data-autoplay data-p5-version="1.3.1">
+function setup(){
+  createCanvas(100, 100);
+  ellipseMode(CENTER);
+}
+function draw(){
+  ellipse(30, 30, 40, 60); // ellipse(x, y, width, height)
+}
+</script>
+
+<script type="text/p5" data-autoplay data-p5-version="1.3.1">
+function setup(){
+  createCanvas(100, 100);
+  ellipseMode(CORNER);
+}
+function draw(){
+  ellipse(10, 10, 30, 50); // ellipse(x, y, width, height)
+}
+</script>
+
+<script type="text/p5" data-autoplay data-p5-version="1.3.1">
+function setup(){
+  createCanvas(100, 100);
+  ellipseMode(CORNERS);
+}
+function draw(){
+  ellipse(10, 10, 40, 50); // ellipse(x1, y1, x2, y2)
+}
+</script>
+
+      <p>Laten we nu wat meer volledige code bekijken met vormen en met een canvas van 200 op 200 pixels. Let op de createCanvas() functie om de breedte en de hoogte van het canvas te bepalen.</p>
+
+<script type="text/p5" data-autoplay data-p5-version="1.3.1">
+function setup(){
+  createCanvas(200, 200);
+  rectMode(CENTER);
+}
+function draw(){
+  rect(100,100,20,100);
+  ellipse(100,70,60,60);
+  ellipse(81,70,16,32);
+  ellipse(119,70,16,32);
+  line(90,150,80,160);
+  line(110,150,120,160);
+}
+</script>
+
+
+    </main>
+
+    
+    <footer>
+      <h2 class="sr-only">Dankbetuiging</h2>
+      <p> p5.js wordt geleid door <a href='https://github.com/mcturner1995' target="_blank">Moira
+          Turner</a> en werd gemaakt door <a href='http://lauren-mccarthy.com' target="_blank">Lauren Lee
+          McCarthy</a>. p5.js is ontwikkeld door een gemeenschap, met ondersteuning door de <a href="http://processing.org/foundation/" target="_blank">Processing
+          Foundation</a>  en 
+        <a href="http://itp.nyu.edu/itp/" target="_blank">NYU ITP</a>. Persoonlijkheid en grafisch ontwerp door <a
+          href="http://jereljohnson.com/" target="_blank">Jerel Johnson</a>. <a href="/nl/copyright.html">&copy;
+          Info.</a></p>
+    </footer>
+  </div> <!-- end column-span -->
+
+  
+  <!-- outside of column for footer to go across both -->
+  
+  <p class="clearfix"> &nbsp; </p>
+  
+  <object type="image/svg+xml" data="../../assets/img/thick-asterisk-alone.svg" id="asterisk-design-element" aria-hidden="true">
+  </object>
+
+</div><!-- end id="get-started-page"  -->
+
+
+    </div> <!-- close class='container'-->
+
+    
+    <nav id="family" aria-labelledby="processing-sites-heading">
+      <h2 id="processing-sites-heading" class="sr-only">Processing Sister Sites</h2>
+      <ul id="processing-sites" aria-labelledby="processing-sites-heading">
+        <li><a href="http://processing.org">Processing</a></li>
+        <li><a class="here" href="/nl/">p5.js</a></li>
+        <li><a href="http://py.processing.org/">Processing.py</a></li>
+        <li><a href="http://android.processing.org/">Processing for Android</a></li>
+        <li><a href="http://pi.processing.org/">Processing for Pi</a></li>
+        <li><a href="https://processingfoundation.org/">Processing Foundation</a></li>
+      </ul>
+      <a tabindex="1" href="#content" id="skip-to-content">Skip to main content</a>
+    
+    </nav>
+    <script>
+    var langs = ["en","es","ko","nl","zh-Hans"];
+
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-53383000-1', 'auto');
+    ga('send', 'pageview');
+
+    $(window).ready(function() {
+      if (window.location.pathname !== '/' && window.location.pathname !== '/index.html') {
+        $('#top').remove();
+      } else {
+        $('#top').show();
+      }
+    });
+    </script>
+
+
+  </body>
+</html>

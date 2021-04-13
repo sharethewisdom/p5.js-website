@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html class="no-js" lang="nl">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="p5.js a JS client-side library for creating graphic and interactive experiences, based on the core principles of Processing.">
+    <title tabindex="1">learn | p5.js</title>
+    <link rel="stylesheet" href="/assets/css/all.css?v=b0528d">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap" rel="stylesheet">
+
+    <link rel="shortcut icon" href="/../../assets/img/favicon.ico">
+    <link rel="icon" href="/../../assets/img/favicon.ico">
+
+
+    <script src="/../../assets/js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="/../../assets/js/vendor/ace-nc/ace.js"></script>
+    <script src="/../../assets/js/vendor/ace-nc/mode-javascript.js"></script>
+    <script src="/../../assets/js/vendor/prism.js"></script>
+    <script src="/assets/js/init.js?v=97b4f7"></script>
+
+
+  </head>
+  <body>
+
+    <a href="#content" class="sr-only">Spring naar inhoud</a>
+    
+    <!-- p5*js language buttons -->
+    <div id="i18n-btn">
+      <h2 id="i18n-settings" class="sr-only">Taalinstellingen</h2>
+      <ul id="i18n-buttons" aria-labelledby="i18n-settings">
+        <li><a href='#' lang='en' data-lang='en'>English</a></li>
+        <li><a href='#' lang='es' data-lang='es'>Español</a></li>
+        <li><a href='#' lang='nl' data-lang='nl'>Nederlands</a></li>
+        <li><a href='#' lang='zh-Hans' data-lang='zh-Hans'>简体中文</a></li>
+        <li><a href='#' lang='ko' data-lang='ko'>한국어</a></li>
+      </ul>
+    </div>
+    <!-- .container -->
+    <div class="container">
+
+      <!-- logo -->
+      <header id="lockup">
+        <a href="/nl/">
+          <img src="/../../assets/img/p5js.svg" alt="p5 homepage" id="logo_image" class="logo" />
+          <div id="p5_logo"></div>
+        </a>
+      </header>
+      <!-- close logo -->
+
+      
+
+<div id="learn-page">
+
+  
+  <!-- site navigation -->
+  <div class="column-span">
+    <nav class="sidebar-menu-nav-element">
+      <h2 id="menu-title" class="sr-only">Website Navigatie</h2>
+      <input class="sidebar-menu-btn" type="checkbox" id="sidebar-menu-btn" />
+      <label class="sidebar-menu-icon" for="sidebar-menu-btn"><span class="sidebar-nav-icon"></span></label>
+      <ul id="menu" class="sidebar-menu" aria-labelledby="menu-title">
+        <li><a href="/nl/">Start</a></li>
+        <li><a href="https://editor.p5js.org">Editor</a></li>
+        <li><a href="/nl/download/">Download</a></li>
+        <li><a href="/nl/download/support.html">Doneren</a></li>
+        <li><a href="/nl/get-started/">Aan de slag</a></li>
+        <li><a href="/nl/reference/">Referentie</a></li>
+        <li><a href="/nl/libraries/">Programma bibliotheken</a></li>
+        <li><a href="/nl/learn/">Leer</a></li>
+        <li><a href="/nl/examples/">Voorbeelden</a></li>
+        <li><a href="/nl/books/">Boeken</a></li>
+        <li><a href="/nl/community/">Gemeenschap</a></li>
+        <li><a href="https://showcase.p5js.org">Showcase</a></li>
+        <li><a href="https://discourse.processing.org/c/p5js" target=_blank class="other-link">Forum</a></li>
+        <li><a href="http://github.com/processing/p5.js" target=_blank class="other-link">GitHub</a></li>
+        <li><a href="http://twitter.com/p5xjs" target=_blank class="other-link">Twitter</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <div class="column-span">
+
+    <main >
+
+      <div class="attribution">Deze tutorial is van het boek Learning Processing door Daniel Shiffman, gepubliceerd door Morgan Kaufmann, © 2008 Elsevier Inc. Rechten voorbehouden. It was ported to P5 by Kelly Chang. Als je fouten vind of je hebt opmerkingen,<a href="https://github.com/processing/p5.js/issues"> laat het ons aub weten.</a>
+
+      </div>
+
+      <h1>Kleur</h1>
+
+      <p>
+      Wanneer we het in de digitale wereld hebben over een kleur, moeten we heel precies zijn. Je kan niet gewoon zeggen, "Hey, kunt ge die cirkel blauw-achtig-groen maken?". Kleur is bepaald met een numeriek bereik. Laten we met iets gemakkelijk beginnen: zwart en wit of tinten grijs. 0 betekent zwart, 255 betekent wit en alles ertussen is een bepaalde tint grijs van donker naar licht.
+      </p>
+
+      <img src="../../assets/learn/color/grayscale.svg">
+
+      <p>
+      Door de <a href="/nl/reference/#/p5/stroke"> stroke()</a> en <a href="/nl/reference/#/p5/fill">fill()</a> functies toe te voegen voor iets wordt getekend, kunnen we de kleur van bepaalde vormen bepalen. Er is ook de functie <a href="/nl/reference/#/p5/background">background()</a>, die de achtergrond een kleur geeft. Hier is een voorbeeldje.
+      </p>
+
+      <pre><code class="language-javascript">
+        background(255);    // Maak achtergrond wit
+ stroke(0);          // Maak de rand (stroke) zwart
+ fill(150);          // Maak de binnenkant van een vorm (fill) grijs
+ rect(50,50,75,100); // Teken een rechthoek
+      </code></pre>
+
+      <p>
+      Stroke of fill kunnen we weglaten met de functie: <a href="/nl/reference/#/p5/noStroke">noStroke()</a> en <a href="/nl/reference/#/p5/noFill">noFill()</a>. Instinctief zouden we met "stroke(0)" kunnen bedoelen dat er geen rand is, maar het is belangrijk om te onthouden dat 0 niet niets is, maar de kleur zwart. Elimineer ze ook niet allebei, met<b>noStroke()</b> en <b>noFill()</b>, zal niets verschijnen!
+      </p>
+
+      <p>Bovendien, als we twee vormen tekenen, zal p5.js altijd de meest recente stroke en fill gebruiken, als je van onder naar boven leest.</p>
+
+      <!-- this script only needs to get added once even if there are multiple widget instances -->
+      <script src="//toolness.github.io/p5.js-widget/p5-widget.js"></script>
+      <script type="text/p5" data-autoplay data-p5-version="1.3.1">
+        function draw() {
+  background(150);
+  stroke(0);
+  line(0, 0, 100, 100);
+  stroke(255);
+  noFill();
+  rect(25, 25, 50, 50);
+}
+      </script>
+
+      <h2>RGB kleur</h2>
+
+      <p>
+      Herinner je vingerverven? Door drie hoofdkleuren te mengen kan elke kleur gemaakt worden. Je kreeg een modder bruine kleur als je alles door elkaar mengde. Des te meer verf je toevoegde, des te donkerder het werd. Digitale kleuren worden ook gemengd, maar het werkt anders. Ten eerste zijn de hoofdkleuren anders: rood, groen en blauw. Ten tweede: we mengen licht, niet verf, waardoor de regels waarmee kleuren combineren anders zijn.
+      </p>
+
+      <img src="../../assets/learn/color/rgb.jpg">
+      <p>
+        <ul class="list_view">
+          <li>rood + groen = geel</li>
+          <li>rood + blauw = paars</li>
+          <li>groen + blauw = cyaan (blauw-groen)</li>
+          <li>rood + groen + blauw = wit</li>
+          <li>geen kleuren = zwart</li>
+        </ul>
+      </p>
+
+      <p>We gingen hier van uit van zo licht mogelijke kleuren, maar je hebt natuurlijk een bereik van kleuren beschikbaar, dus als je een beetje rood, groen en blauw mengt, dan krijg je grijs. En een beetje rood met een beetje blauw is donker paars. Het zou kunnen dat je hier wat gewend aan moet worden, maar als je het regelmatig gebruikt wordt het waarschijnlijk snel even instinctief als vingerverf. En je kan natuurlijk niet zomaar zeggen: "Meng een beetje rood met een beetje blauw.". Je moet een exacte hoeveelheid bepalen. De waarden zij zoals bij de grijswaarden in een bereik tussen 0 (geen kleur) en 255 (zo veel mogelijk kleur), en de volgorde van de parameters is rood, groen en blauw. Door te experimenteren zal je het mengen van RGB snel gewoon worden. Maar eerst gaan we wat code maken met veel voorkomende kleuren.</p>
+
+      <script type="text/p5" data-autoplay data-p5-version="1.3.1">
+function draw() {
+  background(255);
+  noStroke();
+
+  // Bright red
+  fill(255,0,0);
+  ellipse(20,20,16,16);
+
+  // Dark red
+  fill(127,0,0);
+  ellipse(40,20,16,16);
+
+  // Pink (pale red)
+  fill(255,200,200);
+  ellipse(60,20,16,16);
+}
+      </script>
+
+
+
+      <h2>Kleur transparantie</h2>
+
+      <p>Behalve de rood, groen en blauw componenten van elke kleur, is er ook een vierde component, genaamd de "alpha" van de kleur. Dat betekent doorzichtigheid, wat erg nuttig is wanneer je elementen bovenop elkaar wil tekenen waardoor heen je kan kijken. De alfa waarden voor afbeeldingen worden het "alfa kanaal van de afbeelding" ("alpha channel") genoemd.</p>
+      <p>Het is belangrijk om te beseffen dat pixels nooit letterlijk transparant kunnen zijn. Het gaat hier om een handige illusie waarbij kleuren gemengt worden. Achter de schermen gebruikt p5.js de kleur nummers en voegt het een percentage toe aan andere kleur nummers. (Als je graag een rooskleurige bril programmeert kan je hier mee beginnen.)</p>
+
+      <p>Alfa waarden hebben ook een bereik tussen 0 en 255, waarbij 0 volledig transparant is en 255 volledig ondoorzichtig.</p>
+
+      <script type="text/p5" data-autoplay  data-p5-version="1.3.1">
+  createCanvas(100, 100);
+  fill(0,0,255);
+  rect(0,0,50,100);
+
+  // 255 means 100% opacity.
+  fill(255,0,0,255);
+  rect(0,0,100,20);
+
+  // 75% opacity.
+  fill(255,0,0,191);
+  rect(0,25,100,20);
+
+  // 55% opacity.
+  fill(255,0,0,127);
+  rect(0,50,100,20);
+
+  // 25% opacity.
+  fill(255,0,0,63);
+  rect(0,75,100,20);
+
+      </script>
+
+      <h2>Eigen kleur bereik</h2>
+
+      <p>
+      RGB kleuren met een bereik van 0 tot 255 zijn niet de enige manier om kleur te bepalen in p5.js. We kunnen op verschillende manieren over kleur denken. En we kunnen het bereik aanpassen naar bijvoorbeeld, van 0 tot 100 of zo (als een percentage). Je kan dit doen met een eigen<a href="/nl/reference/#/p5/colorMode">colorMode()</a>.
+      </p>
+
+      <pre><code>
+      colorMode(RGB,100);
+      </code></pre>
+
+      <p>De bovenstaande functie zegt: "OK, we beschouwen kleur in termen van rood, groen en blauw en het bereik van de waarden is tussen 0 en 100.".</p>
+
+      <p>Hoewel het eigenlijk nooit echt handig is, kan je ook verschillende bereiken per kleur bepalen:</p>
+
+      <pre><code>
+      colorMode(RGB,100,500,10,255);
+      </code></pre>
+
+      <p>Nu zeggen we "rood waarden gaan van 0 tot 100, groen gaat van 0 tot 500, blauw van 0 tot 10, en alfa van 0 tot 255."</p>
+
+      <p>Tot slot kan je kleur ook in HSB modus bepalen. Dat staat voor (hue, saturation, brightness). We gaan hier niet te veel in detail, maar HSB werkt als volgt:</p>
+
+      <img src="../../assets/learn/color/hsb.png">
+      <ul class="list_view">
+        <li><b>Hue (tint)</b>—Het type kleur, standaard met een bereik van 0 tot 360.</li>
+        <li><b>Saturation (verzadiging)</b>—De levendigheid van een kleur, standaard van 0 tot 100.</li>
+        <li><b>Brightness (lichtheid)</b>—Hoe licht de kleur is, standaard van 0 tot 100.</li>
+      </ul>
+
+      <p>Met <a href="/nl/reference/#/p5/colorMode">colorMode()</a> kan je je eigen bereik bepalen voor deze waarden. Sommigen hebben liever een 0-360 bereik voor de tint (denk aan 360 graden van een kleuren wiel) en 0-100 voor verzadiging en lichtheid (denk aan percentage).</p>
+
+    </main>
+
+    
+    <footer>
+      <h2 class="sr-only">Dankbetuiging</h2>
+      <p> p5.js wordt geleid door <a href='https://github.com/mcturner1995' target="_blank">Moira
+          Turner</a> en werd gemaakt door <a href='http://lauren-mccarthy.com' target="_blank">Lauren Lee
+          McCarthy</a>. p5.js is ontwikkeld door een gemeenschap, met ondersteuning door de <a href="http://processing.org/foundation/" target="_blank">Processing
+          Foundation</a>  en 
+        <a href="http://itp.nyu.edu/itp/" target="_blank">NYU ITP</a>. Persoonlijkheid en grafisch ontwerp door <a
+          href="http://jereljohnson.com/" target="_blank">Jerel Johnson</a>. <a href="/nl/copyright.html">&copy;
+          Info.</a></p>
+    </footer>
+  </div> <!-- end column-span -->
+
+  
+  <!-- outside of column for footer to go across both -->
+  
+  <p class="clearfix"> &nbsp; </p>
+  
+  <object type="image/svg+xml" data="../../assets/img/thick-asterisk-alone.svg" id="asterisk-design-element" aria-hidden="true">
+  </object>
+
+</div><!-- end id="get-started-page"  -->
+
+
+    </div> <!-- close class='container'-->
+
+    
+    <nav id="family" aria-labelledby="processing-sites-heading">
+      <h2 id="processing-sites-heading" class="sr-only">Processing Sister Sites</h2>
+      <ul id="processing-sites" aria-labelledby="processing-sites-heading">
+        <li><a href="http://processing.org">Processing</a></li>
+        <li><a class="here" href="/nl/">p5.js</a></li>
+        <li><a href="http://py.processing.org/">Processing.py</a></li>
+        <li><a href="http://android.processing.org/">Processing for Android</a></li>
+        <li><a href="http://pi.processing.org/">Processing for Pi</a></li>
+        <li><a href="https://processingfoundation.org/">Processing Foundation</a></li>
+      </ul>
+      <a tabindex="1" href="#content" id="skip-to-content">Skip to main content</a>
+    
+    </nav>
+    <script>
+    var langs = ["en","es","ko","nl","zh-Hans"];
+
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-53383000-1', 'auto');
+    ga('send', 'pageview');
+
+    $(window).ready(function() {
+      if (window.location.pathname !== '/' && window.location.pathname !== '/index.html') {
+        $('#top').remove();
+      } else {
+        $('#top').show();
+      }
+    });
+    </script>
+
+
+  </body>
+</html>

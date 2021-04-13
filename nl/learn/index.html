@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html class="no-js" lang="nl">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="p5.js a JS client-side library for creating graphic and interactive experiences, based on the core principles of Processing.">
+    <title tabindex="1">learn | p5.js</title>
+    <link rel="stylesheet" href="/assets/css/all.css?v=b0528d">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap" rel="stylesheet">
+
+    <link rel="shortcut icon" href="/../../assets/img/favicon.ico">
+    <link rel="icon" href="/../../assets/img/favicon.ico">
+
+
+    <script src="/../../assets/js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="/../../assets/js/vendor/ace-nc/ace.js"></script>
+    <script src="/../../assets/js/vendor/ace-nc/mode-javascript.js"></script>
+    <script src="/../../assets/js/vendor/prism.js"></script>
+    <script src="/assets/js/init.js?v=97b4f7"></script>
+
+
+  </head>
+  <body>
+
+    <a href="#content" class="sr-only">Spring naar inhoud</a>
+    
+    <!-- p5*js language buttons -->
+    <div id="i18n-btn">
+      <h2 id="i18n-settings" class="sr-only">Taalinstellingen</h2>
+      <ul id="i18n-buttons" aria-labelledby="i18n-settings">
+        <li><a href='#' lang='en' data-lang='en'>English</a></li>
+        <li><a href='#' lang='es' data-lang='es'>Español</a></li>
+        <li><a href='#' lang='nl' data-lang='nl'>Nederlands</a></li>
+        <li><a href='#' lang='zh-Hans' data-lang='zh-Hans'>简体中文</a></li>
+        <li><a href='#' lang='ko' data-lang='ko'>한국어</a></li>
+      </ul>
+    </div>
+    <!-- .container -->
+    <div class="container">
+
+      <!-- logo -->
+      <header id="lockup">
+        <a href="/nl/">
+          <img src="/../../assets/img/p5js.svg" alt="p5 homepage" id="logo_image" class="logo" />
+          <div id="p5_logo"></div>
+        </a>
+      </header>
+      <!-- close logo -->
+
+      
+
+<div id="learn-page">
+
+  
+  <!-- site navigation -->
+  <div class="column-span">
+    <nav class="sidebar-menu-nav-element">
+      <h2 id="menu-title" class="sr-only">Website Navigatie</h2>
+      <input class="sidebar-menu-btn" type="checkbox" id="sidebar-menu-btn" />
+      <label class="sidebar-menu-icon" for="sidebar-menu-btn"><span class="sidebar-nav-icon"></span></label>
+      <ul id="menu" class="sidebar-menu" aria-labelledby="menu-title">
+        <li><a href="/nl/">Start</a></li>
+        <li><a href="https://editor.p5js.org">Editor</a></li>
+        <li><a href="/nl/download/">Download</a></li>
+        <li><a href="/nl/download/support.html">Doneren</a></li>
+        <li><a href="/nl/get-started/">Aan de slag</a></li>
+        <li><a href="/nl/reference/">Referentie</a></li>
+        <li><a href="/nl/libraries/">Programma bibliotheken</a></li>
+        <li><a href="/nl/learn/">Leer</a></li>
+        <li><a href="/nl/examples/">Voorbeelden</a></li>
+        <li><a href="/nl/books/">Boeken</a></li>
+        <li><a href="/nl/community/">Gemeenschap</a></li>
+        <li><a href="https://showcase.p5js.org">Showcase</a></li>
+        <li><a href="https://discourse.processing.org/c/p5js" target=_blank class="other-link">Forum</a></li>
+        <li><a href="http://github.com/processing/p5.js" target=_blank class="other-link">GitHub</a></li>
+        <li><a href="http://twitter.com/p5xjs" target=_blank class="other-link">Twitter</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <div class="column-span">
+
+    <main id="content">
+      <h1>Leer</h1>
+
+      <p>Deze lessen aan dieper in op bepaalde onderwerpen of bieden een stapsgewijs overzicht. Bekijk de 
+        <a href="/nl/examples">voorbeeld pagina
+        </a>om korte demonstraties van verschillende p5.js onderwerpen.
+      </p>
+
+      
+        <h2 class="tutorial-title">Introductie p5.js</h2>
+        
+          
+            <div class="left-column">
+            
+              <div class="label">
+                <a class="nounderline" href="/nl/get-started/">
+                  <img alt="" src="../../assets/img/learn/lib_placeholder.jpg">
+                  <h3>Aan de slag</h3>
+                </a>
+              </div>
+              <p>Welkom bij p5.js! <br> Deze inleiding gaat over hoe je met een p5.js project start. </p>
+            </div>
+            
+          
+        
+          
+            <div class="right-column">
+             
+              <div class="label">
+                <a class="nounderline" href="https://github.com/processing/p5.js/wiki/p5.js-overview">
+                  <img alt="" src="../../assets/img/learn/lib_placeholder.jpg">
+                  <h3>p5.js overzicht</h3>
+                </a>
+              </div>
+              <p>Een overzicht van de belangrijkste kenmerken van p5.js. </p>
+            </div>
+          
+            <div class="spacer"></div>
+             
+          
+        
+          
+            <div class="left-column">
+            
+              <div class="label">
+                <a class="nounderline" href="https://github.com/processing/p5.js/wiki/Processing-transition">
+                  <img alt="" src="../../assets/img/learn/lib_placeholder.jpg">
+                  <h3>p5.js en Processing</h3>
+                </a>
+              </div>
+              <p>De grootste verschillen tussen de twee en hoe je van de ene naar de andere converteert. </p>
+            </div>
+            
+          
+        
+          
+            <div class="right-column">
+             
+              <div class="label">
+                <a class="nounderline" href="https://github.com/processing/p5.js/wiki/Local-server">
+                  <img alt="" src="../../assets/img/learn/lib_placeholder.jpg">
+                  <h3>Gebruik een plaatselijke server.</h3>
+                </a>
+              </div>
+              <p>Hoe je op Mac OSX, Windows, of Linux een plaatselijke server opstart. </p>
+            </div>
+          
+            <div class="spacer"></div>
+             
+          
+        
+          
+            <div class="left-column">
+            
+              <div class="label">
+                <a class="nounderline" href="https://github.com/processing/p5.js/wiki">
+                  <img alt="" src="../../assets/img/learn/lib_placeholder.jpg">
+                  <h3>p5.js wiki</h3>
+                </a>
+              </div>
+              <p>Bijkomende documentatie en lessen die door de gemeenschap zijn toegevoegd </p>
+            </div>
+            
+          
+        
+          
+            <div class="right-column">
+             
+              <div class="label">
+                <a class="nounderline" href="p5-screen-reader.html">
+                  <img alt="" src="../../assets/img/learn/lib_placeholder.jpg">
+                  <h3>p5 met een screen reader</h3>
+                </a>
+              </div>
+              <p>Hoe je p5 instelt zodat het gemakkelijk met een screen reader gebruikt kan worden. </p>
+            </div>
+          
+            <div class="spacer"></div>
+             
+          
+        
+      
+        <h2 class="tutorial-title">Connecting p5.js</h2>
+        
+          
+            <div class="left-column">
+            
+              <div class="label">
+                <a class="nounderline" href="https://github.com/processing/p5.js/wiki/p5.js,-node.js,-socket.io">
+                  <img alt="" src="../../assets/img/learn/lib_placeholder.jpg">
+                  <h3>node.js en socket.io</h3>
+                </a>
+              </div>
+              <p>Een node.js server met p5.js gebruiken, en communicatie via socket.io. </p>
+            </div>
+          
+            <div class="spacer"></div>
+             
+          
+        
+      
+        <h2 class="tutorial-title">Programmeer onderwerpen</h2>
+        
+          
+            <div class="left-column">
+            
+              <div class="label">
+                <a class="nounderline" href="https://github.com/processing/p5.js/wiki/Beyond-the-canvas">
+                  <img alt="" src="../../assets/img/learn/lib_placeholder.jpg">
+                  <h3>Meer dan alleen canvas</h3>
+                </a>
+              </div>
+              <p>Andere elementen dan het canvas op de webpagina maken en manipuleren. </p>
+            </div>
+            
+          
+        
+          
+            <div class="right-column">
+             
+              <div class="label">
+                <a class="nounderline" href="https://github.com/processing/p5.js/wiki/Getting-started-with-WebGL-in-p5">
+                  <img alt="" src="../../assets/img/learn/lib_placeholder.jpg">
+                  <h3>3D/WebGL</h3>
+                </a>
+              </div>
+              <p>Geavanceerde grafische toepassingen maken met p5.js in WEBGL mode. </p>
+            </div>
+          
+            <div class="spacer"></div>
+             
+          
+        
+          
+            <div class="left-column">
+            
+              <div class="label">
+                <a class="nounderline" href="color.html">
+                  <img alt="" src="../../assets/img/learn/lib_placeholder.jpg">
+                  <h3>Kleur</h3>
+                </a>
+              </div>
+              <p>Een inleiding over digitale kleur. </p>
+            </div>
+            
+          
+        
+          
+            <div class="right-column">
+             
+              <div class="label">
+                <a class="nounderline" href="coordinate-system-and-shapes.html">
+                  <img alt="" src="../../assets/img/learn/lib_placeholder.jpg">
+                  <h3>Coördinaat systemen en vormen</h3>
+                </a>
+              </div>
+              <p>Teken eenvoudige vormen met behulp van coördinaten. </p>
+            </div>
+          
+            <div class="spacer"></div>
+             
+          
+        
+          
+            <div class="left-column">
+            
+              <div class="label">
+                <a class="nounderline" href="curves.html">
+                  <img alt="" src="../../assets/img/learn/lib_placeholder.jpg">
+                  <h3>Curves</h3>
+                </a>
+              </div>
+              <p>Een inleiding in het gebruik van drie soorten curves in p5.js. </p>
+            </div>
+            
+          
+        
+          
+            <div class="right-column">
+             
+              <div class="label">
+                <a class="nounderline" href="interactivity.html">
+                  <img alt="" src="../../assets/img/learn/lib_placeholder.jpg">
+                  <h3>Interactiviteit</h3>
+                </a>
+              </div>
+              <p>Interactiviteit met de muis en het toetsenbord. </p>
+            </div>
+          
+            <div class="spacer"></div>
+             
+          
+        
+          
+            <div class="left-column">
+            
+              <div class="label">
+                <a class="nounderline" href="program-flow.html">
+                  <img alt="" src="../../assets/img/learn/lib_placeholder.jpg">
+                  <h3>Program Flow</h3>
+                </a>
+              </div>
+              <p>Introduction to controlling program flow in p5.js. </p>
+            </div>
+          
+            <div class="spacer"></div>
+             
+          
+        
+      
+        <h2 class="tutorial-title">Een betere programmeur worden.</h2>
+        
+          
+            <div class="left-column">
+            
+              <div class="label">
+                <a class="nounderline" href="debugging.html">
+                  <img alt="" src="../../assets/img/learn/lib_placeholder.jpg">
+                  <h3>Problemen aanpakken</h3>
+                </a>
+              </div>
+              <p>Gids om problemen op te lossen </p>
+            </div>
+            
+          
+        
+          
+            <div class="right-column">
+             
+              <div class="label">
+                <a class="nounderline" href="https://github.com/processing/p5.js/wiki/Optimizing-p5.js-Code-for-Performance">
+                  <img alt="" src="../../assets/img/learn/lib_placeholder.jpg">
+                  <h3>Optimaliseren van p5.js code</h3>
+                </a>
+              </div>
+              <p>Tips om je code sneller te maken en te optimaliseren. </p>
+            </div>
+          
+            <div class="spacer"></div>
+             
+          
+        
+          
+            <div class="left-column">
+            
+              <div class="label">
+                <a class="nounderline" href="tdd.html">
+                  <img alt="" src="../../assets/img/learn/lib_placeholder.jpg">
+                  <h3>Unit testing en ontwikkelen door te testen</h3>
+                </a>
+              </div>
+              <p>Wat is unit testing en hoe gebruik je het? Door Andy Timmons. </p>
+            </div>
+          
+            <div class="spacer"></div>
+             
+          
+        
+      
+        <h2 class="tutorial-title">Bijdragen aan de gemeenschap</h2>
+        
+          
+            <div class="left-column">
+            
+              <div class="label">
+                <a class="nounderline" href="https://github.com/processing/p5.js/blob/main/contributor_docs/">
+                  <img alt="" src="../../assets/img/learn/lib_placeholder.jpg">
+                  <h3>Ontwikkeling</h3>
+                </a>
+              </div>
+              <p>Leer hoe je kan bijdragen aan de ontwikkeling van p5.js. </p>
+            </div>
+            
+          
+        
+          
+            <div class="right-column">
+             
+              <div class="label">
+                <a class="nounderline" href="http://www.luisapereira.net/teaching/looking-inside-p5/">
+                  <img alt="" src="../../assets/img/learn/lib_placeholder.jpg">
+                  <h3>p5 bestuderen</h3>
+                </a>
+              </div>
+              <p>Een inleiding over de bestandsstructuur en middelen om mee p5.js te ontwikkelen, door Luisa Pereira. </p>
+            </div>
+          
+            <div class="spacer"></div>
+             
+          
+        
+          
+            <div class="left-column">
+            
+              <div class="label">
+                <a class="nounderline" href="tutorial-guide.html">
+                  <img alt="" src="../../assets/img/learn/lib_placeholder.jpg">
+                  <h3>Het schrijven van leermiddelen</h3>
+                </a>
+              </div>
+              <p>Een gids om p5.js leermiddelen te schrijven. </p>
+            </div>
+            
+          
+        
+          
+            <div class="right-column">
+             
+              <div class="label">
+                <a class="nounderline" href="https://github.com/processing/p5.js/blob/main/contributor_docs/creating_libraries.md">
+                  <img alt="" src="../../assets/img/learn/lib_placeholder.jpg">
+                  <h3>Maak een uitbreiding</h3>
+                </a>
+              </div>
+              <p>Een uitbreiding op p5.js maken. </p>
+            </div>
+          
+            <div class="spacer"></div>
+             
+          
+        
+      
+
+    </main>
+    
+    <footer>
+      <h2 class="sr-only">Dankbetuiging</h2>
+      <p> p5.js wordt geleid door <a href='https://github.com/mcturner1995' target="_blank">Moira
+          Turner</a> en werd gemaakt door <a href='http://lauren-mccarthy.com' target="_blank">Lauren Lee
+          McCarthy</a>. p5.js is ontwikkeld door een gemeenschap, met ondersteuning door de <a href="http://processing.org/foundation/" target="_blank">Processing
+          Foundation</a>  en 
+        <a href="http://itp.nyu.edu/itp/" target="_blank">NYU ITP</a>. Persoonlijkheid en grafisch ontwerp door <a
+          href="http://jereljohnson.com/" target="_blank">Jerel Johnson</a>. <a href="/nl/copyright.html">&copy;
+          Info.</a></p>
+    </footer>
+  </div> <!-- end column-span -->
+
+  
+  <!-- outside of column for footer to go across both -->
+  
+  <p class="clearfix"> &nbsp; </p>
+  
+  <object type="image/svg+xml" data="../../assets/img/thick-asterisk-alone.svg" id="asterisk-design-element" aria-hidden="true">
+  </object>
+
+</div><!-- end id="get-started-page"  -->
+
+
+    </div> <!-- close class='container'-->
+
+    
+    <nav id="family" aria-labelledby="processing-sites-heading">
+      <h2 id="processing-sites-heading" class="sr-only">Processing Sister Sites</h2>
+      <ul id="processing-sites" aria-labelledby="processing-sites-heading">
+        <li><a href="http://processing.org">Processing</a></li>
+        <li><a class="here" href="/nl/">p5.js</a></li>
+        <li><a href="http://py.processing.org/">Processing.py</a></li>
+        <li><a href="http://android.processing.org/">Processing for Android</a></li>
+        <li><a href="http://pi.processing.org/">Processing for Pi</a></li>
+        <li><a href="https://processingfoundation.org/">Processing Foundation</a></li>
+      </ul>
+      <a tabindex="1" href="#content" id="skip-to-content">Skip to main content</a>
+    
+    </nav>
+    <script>
+    var langs = ["en","es","ko","nl","zh-Hans"];
+
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-53383000-1', 'auto');
+    ga('send', 'pageview');
+
+    $(window).ready(function() {
+      if (window.location.pathname !== '/' && window.location.pathname !== '/index.html') {
+        $('#top').remove();
+      } else {
+        $('#top').show();
+      }
+    });
+    </script>
+
+
+  </body>
+</html>
